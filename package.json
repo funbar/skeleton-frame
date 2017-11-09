@@ -1,0 +1,32 @@
+{
+  "name": "moon-television",
+  "version": "0.0.0",
+  "description": "low gravity television",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "browser-sync start --f \"src/**/*\" --server \"docs\" --port 8081",
+    "htmlmin": "htmlclean -o docs -i src",
+    "sass": "node-sass --indented-syntax true --output-style compressed -o docs/styles src/styles",
+    "start": "run-s htmlmin server sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funbar/Moody.git"
+  },
+  "author": "Richard Kim",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/funbar/Moody/issues"
+  },
+  "homepage": "https://github.com/funbar/Moody#readme",
+  "dependencies": {
+    "frow": "^2.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "htmlclean-cli": "^1.0.5",
+    "node-sass": "^4.6.0",
+    "npm-run-all": "^4.1.2"
+  }
+}
